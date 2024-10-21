@@ -1,0 +1,128 @@
+<!-- index.html -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejando Huellas Cancún</title>
+    <link rel="stylesheet" href="styles1.css">
+</html>
+<section class="adopcion-formulario">
+    <h2>Formulario de Adopción</h2>
+    
+    <form id="adopcionForm">
+        <fieldset>
+            <legend>Información personal del adoptante</legend>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="calle" name="calle" placeholder="Calle" required>
+            <input type="text" id="numero" name="numero" placeholder="Número" required>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+            <input type="text" id="estado" name="estado" placeholder="Estado" required>
+            <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Código Postal" required>
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información sobre el hogar</legend>
+            <label for="tipoVivienda">Tipo de vivienda:</label>
+            <select id="tipoVivienda" name="tipoVivienda">
+                <option value="casa">Casa</option>
+                <option value="departamento">Departamento</option>
+            </select>
+
+            <label for="propiedad">¿Propia o renta?:</label>
+            <select id="propiedad" name="propiedad">
+                <option value="propia">Propia</option>
+                <option value="renta">Renta</option>
+            </select>
+
+            <label for="patio">¿Tiene patio o espacio exterior?:</label>
+            <select id="patio" name="patio">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="otrasMascotas">¿Tiene otras mascotas?:</label>
+            <select id="otrasMascotas" name="otrasMascotas">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="niños">¿Tiene niños en casa?:</label>
+            <select id="niños" name="niños">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experiencia con animales</legend>
+            <label for="mascotasAnteriores">¿Ha tenido mascotas antes?:</label>
+            <select id="mascotasAnteriores" name="mascotasAnteriores">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="sucedio">¿Qué sucedió con sus mascotas anteriores?:</label>
+            <textarea id="sucedio" name="sucedio"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Motivo de la adopción</legend>
+            <label for="motivo">¿Por qué desea adoptar?:</label>
+            <textarea id="motivo" name="motivo"></textarea>
+
+            <label for="tiempoSolo">¿Cuánto tiempo pasará el animal solo diariamente?:</label>
+            <input type="text" id="tiempoSolo" name="tiempoSolo" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Compromiso</legend>
+            <label for="costos">¿Está dispuesto a asumir los costos de cuidados?:</label>
+            <select id="costos" name="costos">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="visita">¿Acepta visitas previas o seguimiento post-adopción?:</label>
+            <select id="visita" name="visita">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información del animal</legend>
+            <label for="nombreAnimal">Nombre del animal:</label>
+            <input type="text" id="nombreAnimal" name="nombreAnimal" required>
+
+            <label for="especieAnimal">Especie/Raza:</label>
+            <input type="text" id="especieAnimal" name="especieAnimal" required>
+
+            <label for="edadAnimal">Edad del animal:</label>
+            <input type="text" id="edadAnimal" name="edadAnimal" required>
+
+            <label for="condicionesEspeciales">Condiciones médicas especiales:</label>
+            <textarea id="condicionesEspeciales" name="condicionesEspeciales"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Consentimiento</legend>
+            <label>
+                <input type="checkbox" id="aceptaTerminos" name="aceptaTerminos" required> Acepto los términos y condiciones de adopción.
+            </label>
+        </fieldset>
+
+        <button type="submit">Enviar formulario</button>
+    </form>
+</section>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Dejando Huellas Cancún</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Deshabilita el scroll en la página */
+        }
+
+        /* Contenedor que se ajusta a la pantalla */
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw; /* Ancho completo de la ventana */
+            height: 100vh; /* Altura completa de la ventana */
+        }
+
+        /* El visor PDF se ajusta a las dimensiones del contenedor */
+        embed {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: opacity 0.5s ease-in-out; /* Animación de transición */
+            opacity: 1; /* Inicia completamente visible */
+        }
+
+        /* Animación de desvanecimiento */
+        .hidden {
+            opacity: 0; /* Para la animación de desvanecimiento */
+        }
+
+        /* Ajustes responsivos para pantallas pequeñas */
+        @media only screen and (max-width: 768px) {
+            embed {
+                width: 100vw; /* Ajusta el ancho al 100% en pantallas pequeñas */
+                height: 100vh; /* Mantiene el PDF ocupando toda la pantalla */
+            }
+        }
+
+        /* Ajustes para pantallas más grandes */
+        @media only screen and (min-width: 1200px) {
+            embed {
+                width: 80vw; /* Puede ajustarse para dejar margen en pantallas grandes */
+                height: 90vh; /* Ajusta la altura dejando un pequeño margen */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del PDF a pantalla completa -->
+    <div class="pdf-container">
+        <embed id="pdf-viewer" src="C:/Users/ANGEL LARA/Desktop/Nueva carpeta/proyect-dejandoH3-main/proyect-dejandoH3-main/frontend/PDF/Memoria%20Institucional%20Dejando%20Huella%20(5).pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+    </div>
+
+    <script>
+        // Parámetros para la navegación de página
+        let currentPage = 1;  // Página actual
+        const totalPages = 44;  // Total de páginas en el PDF
+
+        // Referencia al visor PDF
+        const pdfViewer = document.getElementById('pdf-viewer');
+
+        // Función para cambiar la página con animación
+        function changePage(pageNumber) {
+            pdfViewer.classList.add('hidden'); // Iniciar desvanecimiento
+
+            setTimeout(() => {
+                const pdfUrl = `C:/Users/ANGEL LARA/Desktop/Nueva carpeta/proyect-dejandoH3-main/proyect-dejandoH3-main/frontend/PDF/Memoria%20Institucional%20Dejando%20Huella%20(5).pdf#page=${pageNumber}&toolbar=0&navpanes=0&scrollbar=0`;
+                pdfViewer.src = pdfUrl;
+                pdfViewer.classList.remove('hidden'); // Mostrar nuevamente después de cambiar la página
+            }, 500); // Tiempo para la animación antes de cambiar la página
+        }
+
+        // Evento para avanzar de página con click
+        document.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                changePage(currentPage);
+            }
+        });
+
+        // Bloquear el desplazamiento
+        document.body.addEventListener('wheel', (event) => {
+            event.preventDefault();
+        }, { passive: false });
+
+        document.body.addEventListener('touchmove', (event) => {
+            event.preventDefault();
+        }, { passive: false });
+    </script>
+
+</body>
+</html>

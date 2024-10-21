@@ -1,0 +1,248 @@
+/* Estilos generales */
+body {
+    background-image: url('img/descarga.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Secciones transparentes */
+header, footer, .adopcion {
+    background-color: transparent;
+}
+
+/* Estilo de imágenes */
+.animales div img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+/* Estilo del header */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+}
+
+nav ul li a:hover {
+    background-color: #98c1ff;
+}
+
+/* Sección comentarios */
+section h2 {
+    font-size: 28px;
+    color: #0401cf;
+}
+
+.btn-comentarios {
+    background-color: #b3ecff;
+    color: rgb(0, 37, 245);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 19px;
+}
+
+.btn-comentarios:hover {
+    background-color: #007399;
+}
+
+/* Estilo adopción */
+.adopcion {
+    padding: 40px;
+    background-color: transparent;
+}
+
+.adopcion h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Filtros */
+.filtros {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+select {
+    padding: 8px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Animales */
+.animales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.animales div {
+    width: 200px;
+    padding: 15px;
+    background-color: rgba(255, 204, 102, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.animales div:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h2 {
+    font-size: 24px;
+}
+
+footer p {
+    font-size: 19px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 1% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#animalImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#animalImage {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Fondo de huellas con opacidad */
+.modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-image: url('img/67041104868.png');
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#animalName, #animalDescription, #animalDetails {
+    background-color: rgba(255, 255, 255, 0.936); /* Fondo blanco semitransparente */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Botones dentro del modal */
+#adoptButton {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#adoptButton:hover {
+    background-color: #218838;
+}

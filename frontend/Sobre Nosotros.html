@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Dejando Huellas Cancún</title>
+    <style>
+        /* Asegura que cuerpo y HTML ocupen todo el tamaño de la ventana */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Evita el scroll en la página */
+        }
+
+        /* El contenedor del PDF también ocupa toda la ventana */
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw; /* Ancho completo */
+            height: 100vh; /* Altura completa */
+        }
+
+        /* El visor PDF se ajusta al tamaño del contenedor */
+        embed {
+            width: 100vw; /* Ancho completo de la ventana */
+            height: 100vh; /* Altura completa de la ventana */
+            border: none;
+        }
+
+        /* Medios responsivos para dispositivos pequeños (celulares, tablets) */
+        @media only screen and (max-width: 768px) {
+            embed {
+                width: 100vw; /* Asegura que el PDF ocupe todo el ancho en pantallas pequeñas */
+                height: 100vh; /* Mantiene la altura al 100% */
+            }
+        }
+
+        /* Medios responsivos para pantallas más grandes (laptops, monitores) */
+        @media only screen and (min-width: 1200px) {
+            embed {
+                width: 100vw; /* Ancho completo en pantallas grandes */
+                height: 100vh; /* Altura completa */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del PDF -->
+    <div class="pdf-container">
+        <embed id="pdf-viewer" src="C:/Users/ANGEL LARA/Desktop/Nueva carpeta/proyect-dejandoH3-main/proyect-dejandoH3-main/frontend/PDF/Memoria%20Institucional%20Dejando%20Huella%20(5).pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+    </div>
+
+    <script>
+        // Se eliminan eventos de clic innecesarios para que el PDF no desaparezca al hacer clic
+        // Parámetros de la página y el visor PDF
+        let currentPage = 1;
+        const totalPages = 44;
+        const pdfViewer = document.getElementById('pdf-viewer');
+
+        // Ya no se necesita el código para ocultar el contenido, solo se ajusta a pantalla completa.
+    </script>
+
+</body>
+</html>

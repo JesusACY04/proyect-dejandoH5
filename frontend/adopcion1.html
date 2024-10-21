@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adopta a un animal de compañía en Dejando Huellas Cancún. Conoce a perros y gatos que buscan un hogar.">
+    <title>Adopta - Dejando Huellas Cancún</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="adopcion1.html">Adopta</a></li>
+                <li><a href="sobre.html">Sobre Nosotros</a></li >
+                <li class="dropdown">
+                    <a href="contacto.html" class="dropbtn">Contacto</a>
+                    <div class="dropdown-content">
+                        <a href="https://wa.me/5219982602004" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Whatsapp
+                        </a>
+                        <a href="https://www.instagram.com/dejandohuellasporcancun/profilecard/?igsh=aGR0OG8zdzR2enZw" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/DejandohuellasporCancun.Mx?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="adopcion">
+        <h1>Animales en Adopción</h1>
+        <div class="filtros">
+            <label for="especie">Especie:</label>
+            <select id="especie" aria-label="Filtrar por especie">
+                <option value="todos">Todos</option>
+                <option value="Perro">Perros</option>
+                <option value="Gato">Gatos</option>
+            </select>
+            <label for="edad">Edad:</label>
+            <select id="edad" aria-label="Filtrar por edad">
+                <option value="todas">Todas</option>
+                <option value="Cachorro">Cachorro</option>
+                <option value="Adulto">Adulto</option>
+            </select>
+        </div>
+        <div class="animales">
+            <!-- Aquí se cargarán dinámicamente los animales disponibles -->
+        </div>
+    </section>
+
+    <!-- Modal para mostrar los detalles de los animales -->
+    <div id="animalModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close" aria-label="Cerrar">&times;</button>
+            <img id="animalImage" src="" alt="Animal en adopción" />
+            <h2 id="animalName"></h2>
+            <p id="animalDescription"></p>
+            <p id="animalDetails"></p>
+            <button id="adoptButton" onclick="window.open('https://form.jotform.com/242919074828871', '_blank', 'noopener noreferrer');">¡Adoptar!</button>
+        </div>
+    </div>
+
+    <footer>
+        <section>
+            <h2>Comentarios</h2>
+            <p>¡Nos encantaría saber tu opinión!</p>
+            <a href="https://angeldarki611.blogspot.com/2024/10/blog-post_17.html" class="btn-comentarios" target="_blank" rel="noopener noreferrer">Ver Comentarios</a>
+            <p>© 2024 Dejando Huellas Cancún</p>
+        </section>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
