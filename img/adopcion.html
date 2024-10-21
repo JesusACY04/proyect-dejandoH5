@@ -1,0 +1,45 @@
+<!-- adopcion.html -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta - Dejando Huellas Cancún</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="adopcion.html">Adopta</a></li>
+                <li><a href="sobre.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="adopcion">
+        <h1>Animales en Adopción</h1>
+        <div class="filtros">
+            <label for="especie">Especie:</label>
+            <select id="especie">
+                <option value="todos">Todos</option>
+                <option value="perros">Perros</option>
+                <option value="gatos">Gatos</option>
+            </select>
+            <label for="edad">Edad:</label>
+            <select id="edad">
+                <option value="todas">Todas</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="adulto">Adulto</option>
+            </select>
+        </div>
+        <div class="animales">
+            <!-- Aquí se cargarán dinámicamente los animales disponibles -->
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Dejando Huellas Cancún</p>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
